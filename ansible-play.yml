@@ -1,0 +1,31 @@
+---
+- name: Update repos
+  hosts: all
+  become: yes
+  tasks:
+  - name: Update
+    apt:
+      update_cache: true
+
+- name: Install Curl
+  hosts: all
+  become: yes
+  tasks:
+  - name: Curl
+    apt:
+      name: curl
+      state: latest
+
+- name: Install Docker
+  hosts: all
+  become: yes
+  tasks:
+  - apt:
+      name: docker
+      state: latest
+
+#- name: Docker Compose
+#  hosts: all
+#  become: yes
+#  tasks:
+    
