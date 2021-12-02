@@ -24,8 +24,8 @@
       name: docker
       state: latest
 
-#- name: Docker Compose
-#  hosts: all
-#  become: yes
-#  tasks:
-    
+- name: Docker Compose
+  hosts: all
+  become: yes
+  tasks:
+  - shell: /bin/bash ./docker-compose.sh
